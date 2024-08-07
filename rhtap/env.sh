@@ -15,7 +15,7 @@ export BUILD_ARGS=""
 export BUILD_ARGS_FILE=""
 
 # from ACS_*.*
-export DISABLE_ACS=true
+export DISABLE_ACS=false
 # Optionally set ROX_CENTRAL_ENDPOINT here instead of configuring a Jenkins secret
 # export ROX_CENTRAL_ENDPOINT=central-acs.apps.user.cluster.domain.com:443
 export INSECURE_SKIP_TLS_VERIFY=true
@@ -33,10 +33,10 @@ export TARGET_BRANCH=""
 # enterprise contract
 export POLICY_CONFIGURATION="github.com/enterprise-contract/config//rhtap-jenkins"
 #internal, assumes jenkins is local openshift
-export REKOR_HOST=http://rekor-server.rhtap.svc
+export REKOR_HOST=http://rekor-server.rhtap-tas.svc
 export IGNORE_REKOR=false
 export INFO=true
 export STRICT=true
 export EFFECTIVE_TIME=now
 export HOMEDIR=$(pwd)
-export TUF_MIRROR=http://tuf.rhtap.svc
+export TUF_MIRROR=http://tuf.rhtap-tas.svc
